@@ -6,7 +6,7 @@ VPN Website
 
 2. Install lighttpd
 
-apt-get install lighttpd
+`apt-get install lighttpd`
 
 3. Configure lighttpd.conf
 
@@ -19,13 +19,13 @@ server.port                 = 80
 ```
 4. Restart lighttpd
 
-service restart lighttpd
+`service restart lighttpd`
 
 5. Add accept rule for port 80 in IPtable.
 
 run command:
 
-iptables -I INPUT -p tcp --dport 80 -j ACCEPT
+`iptables -I INPUT -p tcp --dport 80 -j ACCEPT`
 
 To enable it on bootup:
 
