@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+Peter's VPN
+</title>
+</head>
+
+<body>
+<h1 style="text-align:center;" >
+Windows 系统环境下VPN使用说明
+</h1>
+
+
+<p style="text-align:left;">
+<font size="4">
+Windows 系统推荐使用以下两种VPN协议。<br>
+<a href="#PPTP">PPTP</a>： 配置简单。<br>
+<a href="#IPSec">IPSec</a>： 速度快，配置复杂。<br>
+</font>
+</p>
+
+<h2 id="PPTP" style="text-align:center;" >
+PPTP 使用说明
+</h2>
+<p style="text-align:left;">
+<font size="4"><b>配置信息</b></font><br>
+
+<b><a href="#PPTP-Windows7">Windows 7:</a></b><br>
+Internet地址： petersvpn.com (美国主服务器) or sg.petersvpn.com (新加坡) <br>
+目标名称： 随意                                                            <br>
+用户名： [Your account]                                                  <br>
+密码： [Your password]                                                   <br>
+其他： 默认                                                               <br>
+<br>
+
+<b><a href="#PPTP-Windows10">Windows 10:</a></b><br>
+VPN供应商： Windows (内置)                                                 <br>
+连接名称： 随意                                                             <br>
+服务器名称或地址： petersvpn.com (USA) or sg.petersvpn.com (Singapore) <br>
+VPN类型： Automatic or PPTP                                                             <br>
+登录信息的类型： 用户名和密码                                                  <br>
+用户名： [Your account]                                                  <br>
+密码： [Your password]                                                    <br>
+其他： 默认
+</p>
+
+<h3 id="PPTP-Windows7" style="text-align:center;" >
+PPTP - Windows 7 配置
+</h3>
+<p style="text-align:center;">
+图一：
+<img border="0" src="images/Windows7/Setup_1.jpg" width="600" heigth="400"> <br><br><br>
+图二：
+<img border="0" src="images/Windows7/Setup_2.jpg" width="600" heigth="400"> <br><br><br>
+图三：
+<img border="0" src="images/Windows7/Setup_3.jpg" width="600" heigth="400"> <br><br><br>
+图四：
+<img border="0" src="images/Windows7/Setup_4.jpg" width="600" heigth="400"> <br><br><br>
+图五：
+<img border="0" src="images/Windows7/Setup_5.jpg" width="600" heigth="400"> <br><br><br>
+图六：
+<img border="0" src="images/Windows7/Setup_6.jpg" width="600" heigth="400"> <br><br><br>
+图七：
+<img border="0" src="images/Windows7/Setup_7.jpg" width="600" heigth="400"> <br><br><br>
+图八：
+<img border="0" src="images/Windows7/Setup_8.jpg" width="600" heigth="400"> <br><br><br>
+图九：
+<img border="0" src="images/Windows7/Setup_9.jpg" width="600" heigth="400"> <br><br><br>
+图十：
+<img border="0" src="images/Windows7/Setup_10.jpg" width="600" heigth="400"> <br><br><br>
+</p>
+
+<h3 id="PPTP-Windows10" style="text-align:center;" >
+PPTP - Windows 10 配置
+</h3>
+
+<p style="text-align:left;">
+To create a new VPN configuration, go to Windows Start > Settings > Network & Internet > VPN.<br> 
+Click + Add a VPN connection, and follow the screenshots below.<br> 
+</p>
+
+<p style="text-align:center;">
+<img border="0" src="images/Windows10/1.jpg" width="600" heigth="400"> <br><br>
+<img border="0" src="images/Windows10/2.jpg" width="600" heigth="400"> <br><br>
+<img border="0" src="images/Windows10/3.jpg" width="600" heigth="400"> <br><br>
+<img border="0" src="images/Windows10/4.jpg" width="600" heigth="400"> <br><br>
+</p>
+
+
+<h2 id="IPSec" style="text-align:center;" >
+IPSec 使用说明
+</h2>
+<p style="text-align:left;">
+1. 下载并安装免费的 Shrew Soft VPN 客户端 <a href="https://www.shrew.net/download/vpn/vpn-client-2.2.2-release.exe">https://www.shrew.net/download/vpn/vpn-client-2.2.2-release.exe </a>。（注:如果国内不能下载先通过其他方式翻墙。）              <br>
+安装时选择Standard Edition (Free)。                                                                                                             <br>
+2. 单击开始菜单 -> 所有程序 -> ShrewSoft VPN Client -> VPN Access Manager。                                                                       <br>
+3. 单击工具栏中的 Add (+) 按钮。                                                                                                                  <br>
+4. 在 Host Name or IP Address 字段中输入VPN 服务器地址 petersvpn.com(美国主服务器) or sg.petersvpn.com(新加坡)。                                      <br>
+5. 单击 Authentication 选项卡，从 Authentication Method 下拉菜单中选择 Mutual PSK + XAuth。                                                          <br>
+6. 单击 Credentials 子选项卡，并在 Pre Shared Key 字段中输入petersvpn。                                                                              <br>
+7. 单击 Phase 1 选项卡，从 Exchange Type 下拉菜单中选择 main。                                                                                       <br>
+8. 单击 Phase 2 选项卡，从 HMAC Algorithm 下拉菜单中选择 sha1。                                                                                      <br>
+9. 单击 Save 保存 VPN 连接的详细信息。                                                                                                             <br>
+10.选择新添加的 VPN 连接。单击工具栏中的 Connect 按钮。                                                                                                <br>
+11. 在 Username 字段中输入你的 VPN 用户名。                                                                                                        <br>
+在 Password 字段中输入你的 VPN 密码。                                                                                                              <br>
+单击 Connect。                                                                                                                                 <br>
+12. VPN 连接成功后，你会在 VPN Connect 状态窗口中看到 tunnel enabled 字样。单击 "Network" 选项卡，并确认 Established - 1 显示在 "Security Associations" 下面。  <br>
+13. 断开点击Disconnect.                                                                                                                        <br>
+<br>
+</p>
+<p style="text-align:center;">
+<font size="4"><b>IPSec 配置截图</b></font><br>
+Step1:<br><img border="0" src="images/Windows_IPSec/Step1.png" width="600" heigth="400"> <br><br>
+Step4:<br><img border="0" src="images/Windows_IPSec/Step4.png" width="600" heigth="400"> <br><br>
+Step5:<br><img border="0" src="images/Windows_IPSec/Step5.png" width="600" heigth="400"> <br><br>
+Step6:<br><img border="0" src="images/Windows_IPSec/Step6.png" width="600" heigth="400"> <br><br>
+Step7:<br><img border="0" src="images/Windows_IPSec/Step7.png" width="600" heigth="400"> <br><br>
+Step8:<br><img border="0" src="images/Windows_IPSec/Step8.png" width="600" heigth="400"> <br><br>
+Step11:<br><img border="0" src="images/Windows_IPSec/Step11.png" width="600" heigth="400"> <br><br>
+Step12:<br><img border="0" src="images/Windows_IPSec/Step12.png" width="600" heigth="400"> <br>
+        <img border="0" src="images/Windows_IPSec/Step12_2.png" width="600" heigth="400"> <br><br>
+</p>
+
+</body>
+
+</html>

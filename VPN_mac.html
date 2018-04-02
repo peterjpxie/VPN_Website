@@ -13,27 +13,33 @@ Peter's VPN
 MacBook VPN使用说明
 </h1>
 
-
-
-<h3 style="text-align:center;" >
-IPSec参考这个: <a href="https://doc.notisp.net/cn/mac-osx/mac-osx-ikev1-how-to.html">Link</a>
-</h3>
-
-
-
 <h3 style="text-align:left;" >
 Mac VPN配置信息:
 </h3>
 
 <p style="text-align:left;">
 接口: VPN<br>
-VPN类型: L2TP<br>
-服务器地址: petersvpn.com<br>
-帐户名称: <你账号><br>
-密码: <你密码><br>
-共享的密钥：petersvpn<br>
-
+VPN类型: 'Cisco IPSec' (Recommended) or 'L2TP over IPSec'<br>
+服务器地址: petersvpn.com (美国主服务器) or sg.petersvpn.com (新加坡) <br>
+帐户名称: [Your account]<br>
+密码: [Your password]<br>
+共享的密钥(Shared Secret)：petersvpn<br>
+组别名称(Group Name): <空> (Empty)<br>
+其它: 默认<br>
 </p>
+
+<h4 style="text-align:center;" >
+IPSec配置截图请参考这个: <a href="https://doc.notisp.net/cn/mac-osx/mac-osx-ikev1-how-to.html">Link(中文)</a>, <a href="https://www.liquidweb.com/kb/how-to-mac-os-x-cisco-vpn-set-up/">Link(EN)</a>
+</h4>
+
+<h4 style="text-align:center;" >
+L2TP配置截图请参考这个: <a href="https://doc.notisp.net/cn/mac-osx/mac-osx-l2tp-how-to.html">Link</a>
+</h4>
+<p style="text-align:center;">
+注意： L2TP必须在高级选项里勾选"通过VPN连接发送所有通信"。<br>
+<img border="0" src="images/Mac/2.png" width="400" heigth="600"><br>
+</p>
+
 
 </body>
 </html>
