@@ -9,9 +9,11 @@ Peter's VPN
 
 <body>
 
+<!--
 <h1 style="text-align:center;background-color:Tomato;" >
 <i>Maintenance in progress</i><br>
 </h1>
+-->
 
 <h1 style="text-align:center;">
 Peter's VPN使用说明<br>
@@ -45,35 +47,27 @@ document.getElementById('trialUser').innerHTML = 'Today';
 };
 
 -->
+
 <!--
 <script>
 window.onload = function() {
-document.getElementById('trialUser').innerHTML = 'Today'; 
-
-    var rawFile = new XMLHttpRequest();
-
-//	document.getElementById('trialUser').innerHTML = 'allText1'; 
-    rawFile.onreadystatechange = function ()
-    {
-        if(rawFile.readyState == 4)
-        {
-		    alert('rawFile.readyState == 4');
-            if(rawFile.status == 200 || rawFile.status == 0)
-            {
-                alert('rawFile.status:' + rawFile.status )
-				var allText = rawFile.responseText;
-//              alert(allText)
-				document.getElementById('trialUser').innerHTML = allText; 
-            
-        }
+//document.getElementById('trialUser').innerHTML = 'Trial Password:'; 
+//alert('Test');
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+	  passwd = this.responseText;
+	  //passwd = passwd.replace(/(\r\n\t|\n|\r\t)/gm,"");
+	  trialString = "Today's trial username / password: guest / " + passwd;
+	  trialString = trialString.replace(/\n|\r/g, "");
+	  //replace(/(\r\n\t|\n|\r\t)/gm,"");
+      document.getElementById("trialUser").innerHTML = trialString;
     }
-	rawFile.open("GET", "guestpwd.txt", true);
-//    rawFile.open("GET", "guest_pwd.txt", false);
-	var allText1 = rawFile.responseText;
-	alert('guestpwd.txt responseText:'+allText1);
-    rawFile.send();
+  };
+  xhttp.open("GET", "guest_pwd.conf", true);
+  xhttp.send();
+  
 };
-
 </script>
 -->
 
@@ -121,7 +115,7 @@ Windows VPN使用说明
 <p id=pay style="text-align:center;">
 费用: 100元/年或10元/月(可付多月)<br>
 支付宝: peter_hey@163.com 或 微信支付<br>
-<i>Tips: 先保存图片到手机，然后扫描支付时选本地相册。</i><br>
+<font size=2>Tips: 先保存图片到手机，然后扫描支付时选本地相册。备注写上名字。</font><br>
 <img border="0" src="images/Alipay.jpg" width="300" height="450"><br>
 <img border="0" src="images/WeChatPay.jpg" width="300" height="400"><br>
 </p>
