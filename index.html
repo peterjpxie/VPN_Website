@@ -28,48 +28,26 @@ Peter's VPN使用说明<br>
 <p id="trialUser" style="text-align:center;font-size:100%;font-style:italic;">
 Today's trial username / password: guest / hackme1234
 </p>
-<!--
-window.onload = function() {
-  yourFunction(param1, param2);
-};
 
-
-function load() {
-document.getElementById('trialUser').innerHTML = "Password";
-}
-
-window.onLoad = load();
-
-document.getElementById('trialUser').innerHTML = 'Password'; 
-
-window.onload = function() {
-document.getElementById('trialUser').innerHTML = 'Today'; 
-};
-
--->
-
-<!--
 <script>
 window.onload = function() {
-//document.getElementById('trialUser').innerHTML = 'Trial Password:'; 
-//alert('Test');
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
 	  passwd = this.responseText;
-	  //passwd = passwd.replace(/(\r\n\t|\n|\r\t)/gm,"");
+	  //passwd = "passwd";
+	  //alert(passwd);
+	  //passwd = passwd.replace(/\\r/g, '');
 	  trialString = "Today's trial username / password: guest / " + passwd;
-	  trialString = trialString.replace(/\n|\r/g, "");
+	  //trialString = trialString.replace(/\\r/g, '');
 	  //replace(/(\r\n\t|\n|\r\t)/gm,"");
       document.getElementById("trialUser").innerHTML = trialString;
     }
   };
   xhttp.open("GET", "guest_pwd.conf", true);
   xhttp.send();
-  
-};
+}; 
 </script>
--->
 
 <h3 style="text-align:center;" >
 <a href="VPN_ios.html">
