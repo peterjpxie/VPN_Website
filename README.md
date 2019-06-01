@@ -1,7 +1,7 @@
 # Personal VPN Website
 
 ## How to deploy in Ubuntu
-1. Copy Website files to server, e.g. /root/Website.
+1. Clone or copy Website files to server, e.g. /root/Website.
 
 2. Install lighttpd
 
