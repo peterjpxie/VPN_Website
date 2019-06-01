@@ -58,26 +58,11 @@ A VPN simply works everywhere with magic!<br>
 </div> 
 -->
 
-<div style="background-color:Orange;color:black;padding:20px;font-size:120%;text-align:center">
-  <h2><center>Shutdown</center></h2>
-  <p>This service will be shut down on May 30.</p>
-  <p>VPN服务将于5月30日关闭。请Google可用VPN，推荐expressvpn。</p>
-</div> 
-
+<!--  *** Disable guest user ***
+<
 <p id="trialUser" style="text-align:center;font-size:100%;color:blue;">
 Today's VPN username / password: loading... 
 </p>
-
-<p style="text-align:center;font-size:100%;">
-<!-- This is a free service, but your <a href=#donation>donation</a> is much appreciated to keep it alive for you and others. <br> --> 
-This is a free service, but your donation is much appreciated to keep it alive for you and others. <br>
-<b>$10 keeps me alive for a month.</b>
-</p>
-
-<p style="text-align:center;font-size:100%;">
-<button class="btn donate"><a href=#donation>Donate Now</a></button>
-</p>
-
 
 <script>
 window.onload = function() {
@@ -85,12 +70,7 @@ window.onload = function() {
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
 	  passwd = this.responseText;
-	  //passwd = "passwd";
-	  //alert(passwd);
-	  //passwd = passwd.replace(/\\r/g, '');
 	  trialString = "Today's VPN username / password (update every Monday): guest / " + passwd;
-	  //trialString = trialString.replace(/\\r/g, '');
-	  //replace(/(\r\n\t|\n|\r\t)/gm,"");
       document.getElementById("trialUser").innerHTML = trialString;
     }
   };
@@ -99,9 +79,22 @@ window.onload = function() {
 }; 
 </script>
 
+
+<p style="text-align:center;font-size:100%;">
+This is a free service, but your donation is much appreciated to keep it alive for you and others. <br>
+<b>$10 keeps me alive for a month.</b>
+</p>
+
+<p style="text-align:center;font-size:100%;">
+<button class="btn donate"><a href=#donation>Donate Now</a></button>
+</p>
+
+-->
+
+
 <h3 style="text-align:center;" >
 <a href="VPN_ios.html">
-iPhone iOS VPN使用说明
+iOS VPN使用说明
 </h3>
 
 <p style="text-align:center;">
@@ -136,18 +129,7 @@ Windows VPN使用说明
 </p>
 </a>
 
-<!-- Blocked by China's Firewall
-<a href="VPN_proxy.html">
-<h3 style="text-align:center;" >
-Web Proxy使用说明
-</h3>
-
-<p style="text-align:center;">
-<img border="0" src="images/firefox.png" width="200" height="200">
-</p>
-</a>
--->
-
+<!-- *** Disable donation ***
 <h3 style="text-align:center;"></a>
 Donation
 </h3>
@@ -158,13 +140,10 @@ For PayPal, please click <a href=https://paypal.me/peterjpxie>here</a>. And ente
 <br>
 支付宝微信用户，请扫码打赏。金额随意。<br>
 Tips: 保存二维码到本地，然后扫码时从相册选择二维码。<br>
-<!--
-For AliPay / Wechat, please scan the QR codes below.<br>
-Tips: Save the picture to your phone, then select local album to scan QR code and pay.<br>
--->
 <img border="0" src="images/Alipay.jpg" width="300" height="450"><br>
 <img border="0" src="images/WeChatPay.jpg" width="300" height="400"><br>
 </p>
+--> 
 
 <h2 style="text-align:center;">
 <a href="faq.html">
