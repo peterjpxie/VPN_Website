@@ -9,36 +9,35 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>没广告!</title>
   </head>
   <body>
     <div class="w3-container">
-    <h1>没广告!</h1>
-    <p>39:<br></p>
-    <video width=500 controls>
-      <source src="video/39.mp4" type="video/mp4">
-      Your browser does not support the video tag.  
-    </video>
-    <br>
-    <p>40:<br></p>
-    <video width=500 controls>
-      <source src="video/40.mp4" type="video/mp4">
-      Your browser does not support the video tag.  
-    </video>
-    <br>
+    
+    <button onclick="myFunction()" type="button">Get first played range</button><br> 
     <p>41:<br></p>
-    <video width=500 controls>
+    <video width="600" id="41" controls>
       <source src="video/41.mp4" type="video/mp4">
       Your browser does not support the video tag.  
     </video>
     <br>
     <p>42:<br></p>
-    <video width=500 controls>
+    <video width="600" id="42" controls>
       <source src="video/42.mp4" type="video/mp4">
       Your browser does not support the video tag.  
     </video>
     <br>    
     </div > <!--class="w3-container" -->
+    
+    <script>
+    var vid = document.getElementById("41");
+    vid.currentTime = 60;
+    // var vid = document.getElementById("41");
+    function myFunction() { 
+      alert("Start: " + vid.played.start(0) + " End: "  + vid.played.end(0));
+    } 
+    </script>
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
