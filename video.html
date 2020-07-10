@@ -14,23 +14,54 @@
   <body>
     <div class="w3-container">
     
-    <button onclick="myFunction()" type="button">Get first played range</button><br> 
-    <p>41:<br></p>
-    <video width="600" id="41" controls>
-      <source src="video/41.mp4" type="video/mp4">
-      Your browser does not support the video tag.  
-    </video>
-    <br>
-    <p>42:<br></p>
-    <video width="600" id="42" controls>
-      <source src="video/42.mp4" type="video/mp4">
-      Your browser does not support the video tag.  
-    </video>
-    <br>    
+    <!-- <button onclick="myFunction()" type="button">Get first played range</button><br> -->
+    <br> 
+        <video width="500" id="1" controls>
+          <source src="video/中国1945之重庆风云 01 _ 众星云集再现建国前夕各党派斗智斗勇，重回历史烟云（唐国强 _ 张国立 _ 蒋勤勤 _ 袁立）-JVxsvwtxbVU.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video><br>
+        <p>中国1945之重庆风云 01 _ 众星云集再现建国前夕各党派斗智斗勇，重回历史烟云（唐国强 _ 张国立 _ 蒋勤勤 _ 袁立）-JVxsvwtxbVU</p><br>
+         
+        <video width="500" id="2" controls>
+          <source src="video/中国1945之重庆风云 02 _ 众星云集再现建国前夕各党派斗智斗勇，重回历史烟云（唐国强 _ 张国立 _ 蒋勤勤 _ 袁立）-30irTjBRSOg.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video><br>
+        <p>中国1945之重庆风云 02 _ 众星云集再现建国前夕各党派斗智斗勇，重回历史烟云（唐国强 _ 张国立 _ 蒋勤勤 _ 袁立）-30irTjBRSOg</p><br>
+         
+        <video width="500" id="3" controls>
+          <source src="video/中国1945之重庆风云 03 _ 众星云集再现建国前夕各党派斗智斗勇，重回历史烟云（唐国强 _ 张国立 _ 蒋勤勤 _ 袁立）-XFfeM0dh0g4.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video><br>
+        <p>中国1945之重庆风云 03 _ 众星云集再现建国前夕各党派斗智斗勇，重回历史烟云（唐国强 _ 张国立 _ 蒋勤勤 _ 袁立）-XFfeM0dh0g4</p><br>
+         
+        <video width="500" id="4" controls>
+          <source src="video/中国1945之重庆风云 04 _ 众星云集再现建国前夕各党派斗智斗勇，重回历史烟云（唐国强 _ 张国立 _ 蒋勤勤 _ 袁立）-Z38bwYyvGJQ.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video><br>
+        <p>中国1945之重庆风云 04 _ 众星云集再现建国前夕各党派斗智斗勇，重回历史烟云（唐国强 _ 张国立 _ 蒋勤勤 _ 袁立）-Z38bwYyvGJQ</p><br>
+         
+        <video width="500" id="5" controls>
+          <source src="video/中国1945之重庆风云 05 _ 众星云集献礼中华人民共和国成立70周年作品，重回历史烟云（唐国强 _ 张国立 _ 蒋勤勤 _ 袁立）-2DRO2zAc5eE.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video><br>
+        <p>中国1945之重庆风云 05 _ 众星云集献礼中华人民共和国成立70周年作品，重回历史烟云（唐国强 _ 张国立 _ 蒋勤勤 _ 袁立）-2DRO2zAc5eE</p><br>
+         
+        <video width="500" id="6" controls>
+          <source src="video/中国1945之重庆风云 06 _ 众星云集再现建国前夕各党派斗智斗勇，重回历史烟云（唐国强 _ 张国立 _ 蒋勤勤 _ 袁立）-47b9h5G6zZA.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video><br>
+        <p>中国1945之重庆风云 06 _ 众星云集再现建国前夕各党派斗智斗勇，重回历史烟云（唐国强 _ 张国立 _ 蒋勤勤 _ 袁立）-47b9h5G6zZA</p><br>
+         
     </div > <!--class="w3-container" -->
     
     <script>
-    var vid = document.getElementById("41");
+    var i;
+    var skip_begin = 300;
+    for (i = 0; i < 20; i++) {      
+        var vid = document.getElementById("i");
+        vid.currentTime = skip_begin;
+    }
+    var vid = document.getElementById("1");
     vid.currentTime = 60;
     // var vid = document.getElementById("41");
     function myFunction() { 
