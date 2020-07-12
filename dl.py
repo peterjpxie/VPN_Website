@@ -4,6 +4,9 @@ import os
 import time
 from render import render
 
+DOWNLOAD_WAIT = 60 * 2
+RENDER_WAIT = 60 * 3
+
 def bash(cmd):
     """ bash   
     """
@@ -19,7 +22,7 @@ dl_list = 'download_list.txt'
 f_st = os.stat(dl_list)
 
 # if download_list is modified recently, N minutes
-if int(time.time() - f_st.st_mtime) < 60 * 10: 
+if int(time.time() - f_st.st_mtime) < DOWNLOAD_WAIT : 
     with open(dl_list) as f:
         # os.system('cd video')
         for l in f:
@@ -33,6 +36,9 @@ if int(time.time() - f_st.st_mtime) < 60 * 10:
     bash('mv *.webm video/')
     print('Download done!')
 
-render()
-print('All Done!')
+f_st = os.stat('video')
+# if download_list is modified recently, N minutes
+if int(time.time() - f_st.st_mtime) < RENDER_WAIT : 
+    render()
+    print('All Done!')
     
