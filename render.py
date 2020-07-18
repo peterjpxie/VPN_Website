@@ -27,7 +27,7 @@ def render():
         <p>%s</p><br>
         """ % (id,f,f_no_ext)
         video_div += one_video
-    print(video_div) 
+    # print(video_div) 
                     
     with open(html_template, 'r')as template:
         with open(html_file,'w+') as f:    

@@ -29,12 +29,15 @@ if int(time.time() - f_st.st_mtime) < DOWNLOAD_WAIT :
         for l in f:
             if l.strip() != '' and not l.startswith('#'):
                 print('Downloading %s' % l, end='',flush=True)
-                r = bash('youtube-dl %s' % l)
+                r = bash('/usr/local/bin/youtube-dl %s' % l)
                 if r.returncode == 0:
                     print('File downloaded.',flush=True)
-        
-    bash('mv *.mp4 video/')
-    bash('mv *.webm video/')
+                else:
+                    print('Download failed:\n',r.returncode,r.stdout,r.stderr,flush=True)
+    
+    r=bash('mv *.mp4 video/')
+    # print('mv *.mp4 to video/\n:',r.stdout,r.stderr,flush=True)
+    r=bash('mv *.webm video/')
     print('Download done!')
 
 f_st = os.stat('video')
