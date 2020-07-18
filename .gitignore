@@ -3,4 +3,6 @@
 guest_pwd.conf
 guestpwd.txt
 *.mp4
+*.webm
 *.log
+__pycache__
