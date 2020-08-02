@@ -4,7 +4,7 @@ import os
 import time
 from render import render
 
-DOWNLOAD_WAIT = 60 * 2
+DOWNLOAD_WAIT = 60 * 1
 RENDER_WAIT = DOWNLOAD_WAIT
 
 def bash(cmd):
