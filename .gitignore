@@ -5,4 +5,5 @@ guestpwd.txt
 *.mp4
 *.webm
 *.log
+video.html
 __pycache__
