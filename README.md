@@ -1,7 +1,7 @@
 # Personal VPN Website
 
 ## How to deploy in Ubuntu
-1. Clone or copy Website files to server, e.g. /root/Website.
+1. Clone or copy website files to server, e.g. /root/website.
 
 2. Install lighttpd
 
@@ -11,7 +11,7 @@
 
 vi /etc/lighttpd/lighttpd.conf
 ```
-server.document-root        = "/root/Website"   -> Path of Website html files.
+server.document-root        = "/root/website"   -> Path of Website html files.
 \#server.username             = "www-data"       -> Disable authentication
 \#server.groupname            = "www-data"       -> Disable authentication
 server.port                 = 80
