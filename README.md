@@ -18,7 +18,7 @@ server.port                 = 80
 ```
 4. Restart lighttpd
 
-`service restart lighttpd`
+`service lighttpd restart`
 
 5. Add accept rule for port 80 in IPtable.
 
