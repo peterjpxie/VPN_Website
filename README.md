@@ -18,7 +18,7 @@ server.port                 = 80
 ```
 4. Restart lighttpd
 
-`service lighttpd restart`
+`systemctl restart lighttpd`
 
 5. Add accept rule for port 80 in IPtable.
 
@@ -38,3 +38,13 @@ exit 0
 ```
 
 Done! Now you can visit the website by server IP or hostname.
+
+6. Disable lighttpd on bootup
+
+lighttpd service is started on OS bootup. If you want to disable it from bootup, run:
+
+`systemctl disable lighttpd`
+
+It actually moves /etc/rc[2-6].d/S03lighttpd to /etc/rc[2-6].d/K01lighttpd. To restore, run:
+
+`systemctl enable lighttpd`
