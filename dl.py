@@ -29,7 +29,9 @@ if int(time.time() - f_st.st_mtime) < DOWNLOAD_WAIT :
         for l in f:
             if l.strip() != '' and not l.startswith('#'):
                 print('Downloading %s' % l, end='',flush=True)
-                r = bash('/usr/local/bin/youtube-dl %s' % l)
+                dl_cmd = '/usr/local/bin/youtube-dl -o "%%(title)s.%%(ext)s" %s' % l
+                # print('dl_cmd:', dl_cmd)
+                r = bash(dl_cmd)
                 if r.returncode == 0:
                     print('File downloaded.',flush=True)
                 else:
