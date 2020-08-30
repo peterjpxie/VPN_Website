@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import os
-#from time import time
 import time
 from render import render
 
@@ -21,9 +20,10 @@ def bash(cmd):
 dl_list = 'download_list.txt'
 f_st = os.stat(dl_list)
 
-# if download_list is modified recently, N minutes
+# if download_list.txt is modified recently
 # print("Current time:%s, dl_list time:%s, delta:%s" %(time.time(),f_st.st_mtime,time.time()-f_st.st_mtime))
 if int(time.time() - f_st.st_mtime) < DOWNLOAD_WAIT : 
+    print('Start download at %s' % time.asctime())
     with open(dl_list) as f:
         # os.system('cd video')
         for l in f:
@@ -44,7 +44,7 @@ if int(time.time() - f_st.st_mtime) < DOWNLOAD_WAIT :
 
 f_st = os.stat('video')
 # print("Current time:%s, video time:%s, delta:%s" %(time.time(),f_st.st_mtime,time.time()-f_st.st_mtime))
-# if download_list is modified recently, N minutes
+# if video folder is modified recently
 if int(time.time() - f_st.st_mtime) < RENDER_WAIT : 
     render()
     print('All Done!')

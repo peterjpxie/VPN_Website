@@ -1,6 +1,6 @@
 #!/bin/sh
 if ! ps -ef|grep -v grep | grep dl.py; then
-echo "starting dl.py at" $(date)
+#echo "starting dl.py at" $(date)
 python /root/website/dl.py  >> /root/website/dl.log 2>&1
 fi
 # echo "dl.sh done" 
