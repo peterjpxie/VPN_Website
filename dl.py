@@ -28,18 +28,42 @@ if int(time.time() - f_st.st_mtime) < DOWNLOAD_WAIT :
         # os.system('cd video')
         for l in f:
             if l.strip() != '' and not l.startswith('#'):
-                print('Downloading %s' % l, end='',flush=True)
+                print('Downloading %s' % l, flush=True)
                 dl_cmd = '/usr/local/bin/youtube-dl -o "%%(title)s.%%(ext)s" %s' % l
                 # print('dl_cmd:', dl_cmd)
                 r = bash(dl_cmd)
-                if r.returncode == 0:
+                # Note: youtube-dl returncode is always 0 even fails with errors, so check stderr instead of returncode.
+                if r.stderr == '':
                     print('File downloaded.',flush=True)
-                else:
+                elif 'File name too long' in r.stderr: 
+                    # shorten filename and retry
+                    print('File name too long, shorten and retrying...',flush=True)
+                    t = bash('/usr/local/bin/youtube-dl --get-filename %s' % l)
+                    if t.stderr == '':                       
+                        filename = t.stdout
+                        suffix = filename.split('.')[-1].strip() # strip the space
+                        filename = filename[:50] + '.' + suffix
+                        # print('Shortened filename: %s.' % filename,flush=True)
+                        dl_cmd = '/usr/local/bin/youtube-dl -o "%s" %s' % (filename,l)
+                        # print(dl_cmd)
+                        r = bash(dl_cmd) 
+                
+                if r.stderr != '':
                     print('Download failed:\n',r.returncode,r.stdout,r.stderr,flush=True)
     
-    r=bash('mv *.mp4 video/')
-    # print('mv *.mp4 to video/\n:',r.stdout,r.stderr,flush=True)
-    r=bash('mv *.webm video/')
+    for i in os.listdir():
+        if '.' in i and i.split('.')[-1] in ('mp4', 'webm'):
+            # remove '#' which will cause web link issue
+            new_filename = i.replace('#','')
+            os.rename(i,new_filename)
+            time.sleep(0.01) # delay for file rename takes effect
+            print('moving %s.' %  new_filename)
+            mv_cmd = 'mv "%s" video/' % new_filename
+            # print(mv_cmd)
+            r=bash(mv_cmd)
+            if r.returncode !=0:
+                print(r.stdout,r.stderr)
+
     print('Download done!')
 
 f_st = os.stat('video')
