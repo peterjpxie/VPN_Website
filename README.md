@@ -1,4 +1,4 @@
-# Personal VPN Website
+# Personal VPN website based on lighttd
 
 ## How to deploy in Ubuntu
 1. Clone or copy website files to server, e.g. /root/website.
