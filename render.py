@@ -20,11 +20,11 @@ def render():
         id += 1
         f_no_ext = f.replace('.mp4','').replace('.webm','')    
         one_video = """ 
-        <video width="500" id="%s" controls>
+        <video class="video_responsive" id="%s" controls>
           <source src="video/%s" type="video/mp4">
           Your browser does not support the video tag.
         </video><br>
-        <p>%s</p><br>
+        <p class="video_responsive">%s</p><br>
         """ % (id,f,f_no_ext)
         video_div += one_video
     # print(video_div) 
